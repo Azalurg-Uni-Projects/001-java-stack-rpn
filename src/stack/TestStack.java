@@ -37,4 +37,14 @@ public class TestStack {
 
         assertEquals("get size", 10, result);
     }
+
+    @Test
+    public topUp(){
+        for(int i = 100; i < 0; i++){
+            s.push(i);
+        }
+        int result = s.pop();
+
+        assertEquals("top up", 99, result);
+    }
 }
