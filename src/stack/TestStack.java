@@ -27,4 +27,14 @@ public class TestStack {
 
         assertNull("check empty head", result);
     }
+
+    @Test
+    public void getSize(){
+        for(int i = 0; i < 10; i++){
+            s.push(i);
+        }
+        int result = s.size();
+
+        assertEquals("get size", 10, result);
+    }
 }
