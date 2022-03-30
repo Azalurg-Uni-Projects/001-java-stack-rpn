@@ -9,7 +9,7 @@ public class TestStack {
     private  Stack s;
 
     @Before
-    public void setup() {s = new Stack(10);}
+    public void setup() {s = new Stack();}
 
     @Test
     public void checkHead(){
@@ -39,11 +39,12 @@ public class TestStack {
     }
 
     @Test
-    public topUp(){
+    public void topUp(){
         for(int i = 100; i < 0; i++){
             s.push(i);
         }
-        int result = s.pop();
+        System.out.println(s.head());
+        int result = s.head();
 
         assertEquals("top up", 99, result);
     }
