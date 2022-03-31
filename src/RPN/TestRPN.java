@@ -13,4 +13,11 @@ public class TestRPN {
         assertEquals("2 + 2", 4, rpn.calculate());
     }
 
+    @Test
+    public void twoMinusTwo(){
+        RPN rpn =  new RPN("2 2 -");
+
+        assertEquals("2 - 2", 0, rpn.calculate());
+    }
+
 }
