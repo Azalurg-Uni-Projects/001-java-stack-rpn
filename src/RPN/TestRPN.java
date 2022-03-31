@@ -24,7 +24,14 @@ public class TestRPN {
     public void twoPlusMinusTwo(){
         RPN rpn =  new RPN("2 -2 +");
 
-        assertEquals("2 - 2", 0, rpn.calculate());
+        assertEquals("2 + -2", 0, rpn.calculate());
+    }
+
+    @Test
+    public void twoTimesTwo(){
+        RPN rpn =  new RPN("2 2 *");
+
+        assertEquals("2 * 2", 4, rpn.calculate());
     }
 
 }
