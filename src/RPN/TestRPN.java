@@ -41,4 +41,11 @@ public class TestRPN {
         assertEquals("2 / 2", 1, rpn.calculate());
     }
 
+    @Test
+    public void longerExpression(){
+        RPN rpn =  new RPN("8 2 5 * + 1 3 2 * + 4 - /");
+
+        assertEquals("long XD", 6, rpn.calculate());
+    }
+
 }
