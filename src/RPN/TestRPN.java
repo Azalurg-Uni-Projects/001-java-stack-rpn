@@ -34,4 +34,11 @@ public class TestRPN {
         assertEquals("2 * 2", 4, rpn.calculate());
     }
 
+    @Test
+    public void twoDivideByTwo(){
+        RPN rpn =  new RPN("2 2 /");
+
+        assertEquals("2 / 2", 1, rpn.calculate());
+    }
+
 }
