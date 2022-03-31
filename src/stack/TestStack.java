@@ -20,13 +20,6 @@ public class TestStack {
 
         assertEquals("check head", 9, result);
     }
-    
-    @Test
-    public void checkEmptyHead(){
-       int result = s.head();
-
-        assertNull("check empty head", result);
-    }
 
     @Test
     public void getSize(){
@@ -40,7 +33,7 @@ public class TestStack {
 
     @Test
     public void topUp(){
-        for(int i = 100; i < 0; i++){
+        for(int i = 0; i < 100; i++){
             s.push(i);
         }
         System.out.println(s.head());
