@@ -2,7 +2,7 @@ package stack.RPN.Actions;
 
 import stack.stack.Stack;
 
-public class number implements Action{
+public class number implements RPN_Operation {
     @Override
     public boolean compile(String x, Stack memory) {
         if (x == null) {

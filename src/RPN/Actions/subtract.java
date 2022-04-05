@@ -2,7 +2,7 @@ package stack.RPN.Actions;
 
 import stack.stack.Stack;
 
-public class subtract  implements  Action{
+public class subtract  implements RPN_Operation {
     @Override
     public boolean compile(String x, Stack memory) {
         if ("-".equals(x)) {

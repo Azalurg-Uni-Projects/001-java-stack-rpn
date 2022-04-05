@@ -1,12 +1,13 @@
-package stack.stack;
+package stack.tests;
 
 import org.junit.Before;
 import org.junit.Test;
+import stack.stack.Stack;
 
 import static org.junit.Assert.*;
 
 public class TestStack {
-    private  Stack s;
+    private Stack s;
 
     @Before
     public void setup() {s = new Stack();}
