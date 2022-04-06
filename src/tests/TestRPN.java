@@ -22,9 +22,8 @@ public class TestRPN {
     @Test
     public void twoPlusTwo(){
         builder.setExpression("2 2 +");
-        builder.resetOperations(2);
-        builder.addOperation(new number());
         builder.addOperation(new add());
+        builder.addOperation(new number());
         RPN rpn =  builder.getRPN();
 
         assertEquals("2 + 2", 4, rpn.calculate());
@@ -33,7 +32,6 @@ public class TestRPN {
     @Test
     public void twoMinusTwo(){
         builder.setExpression("2 2 -");
-        builder.resetOperations(2);
         builder.addOperation(new number());
         builder.addOperation(new subtract());
         RPN rpn =  builder.getRPN();
@@ -44,7 +42,6 @@ public class TestRPN {
     @Test
     public void twoPlusMinusTwo(){
         builder.setExpression("2 -2 +");
-        builder.resetOperations(2);
         builder.addOperation(new number());
         builder.addOperation(new add());
         RPN rpn =  builder.getRPN();
@@ -55,7 +52,6 @@ public class TestRPN {
     @Test
     public void twoTimesTwo(){
         builder.setExpression("2 2 *");
-        builder.resetOperations(2);
         builder.addOperation(new number());
         builder.addOperation(new multiply());
         RPN rpn =  builder.getRPN();
@@ -66,7 +62,6 @@ public class TestRPN {
     @Test
     public void longerExpression(){
         builder.setExpression("3 4 * 2 - 5 + 5 3 * -");
-        builder.resetOperations(4);
         builder.addOperation(new number());
         builder.addOperation(new add());
         builder.addOperation(new multiply());

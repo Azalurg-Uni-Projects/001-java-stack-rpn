@@ -19,6 +19,7 @@ public class RPN {
     public int calculate() {
         for (int i = 0; i<this.expression.length; i++){
             String character = this.expression[i];
+
            for(int j = 0; j<this.operations.length; j++) {
                boolean result = this.operations[j].compile(character, memory);
                if (result) {

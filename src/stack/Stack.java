@@ -3,6 +3,7 @@ package stack.stack;
 public class Stack {
     private int[] stack;
     private int top;
+
     public Stack() {
         this.stack = new int [10];
         this.top = -1;
