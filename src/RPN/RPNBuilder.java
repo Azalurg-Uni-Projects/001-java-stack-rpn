@@ -34,7 +34,6 @@ public class RPNBuilder implements Builder {
         this.operations[this.top] = operation;
         this.top ++;
     }
-    // todo naprawić addOperation
     public RPN getRPN() {
         return new RPN(expression, operations);
     }
